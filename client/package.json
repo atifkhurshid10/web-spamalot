@@ -1,0 +1,35 @@
+{
+	"name": "client",
+	"version": "0.1.0",
+	"private": true,
+	"proxy": {
+		"/oauth/twitter": {
+			"target": "http://127.0.0.1:5555"
+		},
+		"/oauth/*": {
+			"target": "http://localhost:5555"
+		},
+		"/api/*": {
+			"target": "http://localhost:5555"
+		}
+	},
+	"dependencies": {
+		"axios": "^0.18.0",
+		"jquery": "^3.3.1",
+		"materialize-css": "^1.0.0-rc.1",
+		"react": "^16.3.2",
+		"react-dom": "^16.3.2",
+		"react-redux": "^5.0.7",
+		"react-router-dom": "^4.2.2",
+		"react-scripts": "1.1.4",
+		"react-stripe-checkout": "^2.6.3",
+		"redux": "^4.0.0",
+		"redux-thunk": "^2.2.0"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test --env=jsdom",
+		"eject": "react-scripts eject"
+	}
+}
